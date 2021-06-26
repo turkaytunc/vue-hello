@@ -16,7 +16,7 @@ export default {
 
   methods: {
     closeModal() {
-      this.$emit('closemodal');
+      this.$emit('close-modal');
     },
   },
 };
@@ -31,11 +31,39 @@ export default {
   justify-content: center;
   font-size: 2rem;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 .modal-content {
-  background-color: red;
+  background-color: #ddd;
+  color: black;
+  width: clamp(20rem, calc(100vw - 10rem), 50vw);
+  height: clamp(20rem, calc(100vh - 20rem), 50vh);
+  border-radius: 0.2rem;
+  display: flex;
+  position: relative;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px #333, -1px -1px 5px #333;
+}
+
+.modal-content button {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0.6rem;
+  top: 0.1rem;
+}
+
+.modal-content button:hover {
   color: aliceblue;
 }
 </style>
