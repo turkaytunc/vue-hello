@@ -12,13 +12,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .nav-bar {
   background-color: #333;
   color: white;
   width: 100%;
+  padding: 1rem 0;
 }
 a {
+  font-size: 1rem;
   color: white;
   text-decoration: none;
 }

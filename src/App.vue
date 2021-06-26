@@ -1,17 +1,28 @@
 <template>
   <Navbar />
-  <HelloWorld msg="vue" />
+  <div v-if="showModal"><Modal msg="vue" @closemodal="toggleModal" /></div>
+  <button @click="toggleModal">Show Modal</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Modal from './components/Modal.vue';
 import Navbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Modal,
     Navbar,
+  },
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal;
+    },
   },
 };
 </script>
