@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <div v-if="showModal"><Modal msg="vue" @close-modal="toggleModal" /></div>
+  <teleport to=".modals" v-if="showModal"><Modal msg="vue" @close-modal="toggleModal"/></teleport>
   <button @click="toggleModal">Show Modal</button>
 </template>
 
@@ -46,6 +46,5 @@ export default {
 }
 body {
   scroll-behavior: smooth;
-  position: relative;
 }
 </style>

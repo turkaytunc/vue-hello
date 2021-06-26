@@ -31,8 +31,8 @@ export default {
   justify-content: center;
   font-size: 2rem;
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 .modal-content {
   background-color: #ddd;
@@ -64,6 +64,6 @@ export default {
 }
 
 .modal-content button:hover {
-  color: aliceblue;
+  color: #555;
 }
 </style>
